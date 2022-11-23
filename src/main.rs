@@ -1,7 +1,7 @@
-pub mod two_sum;
-use two_sum::two_sum::Solution;
+pub mod add_two_numbers;
+use add_two_numbers::add_two_numbers::{ListNode, Solution};
 
 fn main() {
-    let result = Solution::two_sum(vec![1,2,3], 5);
-    println!("[{}, {}]", result[0], result[1]);
+    let mut first_list = Some(Box::new(ListNode{val: 1, next: Some(Box::new(ListNode { val: 2, next: None }))}));
+    println!("{:?}", first_list);
 }
