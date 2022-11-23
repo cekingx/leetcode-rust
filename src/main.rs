@@ -1,7 +1,8 @@
-pub mod add_two_numbers;
-use add_two_numbers::add_two_numbers::{ListNode, Solution};
+pub mod palindrom_number;
+use palindrom_number::palindrom_number::Solution;
 
 fn main() {
-    let mut first_list = Some(Box::new(ListNode{val: 1, next: Some(Box::new(ListNode { val: 2, next: None }))}));
-    println!("{:?}", first_list);
+    println!("is 121 palindrom: {}", Solution::is_palindrome(121));
+    println!("is 1221 palindrom: {}", Solution::is_palindrome(1221));
+    println!("is 123 palindrom: {}", Solution::is_palindrome(123));
 }
