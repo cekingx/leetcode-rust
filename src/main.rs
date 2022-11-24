@@ -1,5 +1,5 @@
-pub mod palindrom_number;
-use palindrom_number::palindrom_number::Solution;
+pub mod palindrome_number;
+use palindrome_number::palindrome_number::Solution;
 
 fn main() {
     println!("is 121 palindrom: {}", Solution::is_palindrome(121));
