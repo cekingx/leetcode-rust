@@ -1,8 +1,8 @@
-pub mod palindrome_number;
-use palindrome_number::palindrome_number::Solution;
+pub mod roman_to_int;
+use roman_to_int::roman_to_int::Solution;
 
 fn main() {
-    println!("is 121 palindrom: {}", Solution::is_palindrome(121));
-    println!("is 1221 palindrom: {}", Solution::is_palindrome(1221));
-    println!("is 123 palindrom: {}", Solution::is_palindrome(123));
+    println!("{}", Solution::roman_to_int(String::from("III")));
+    println!("{}", Solution::roman_to_int(String::from("IV")));
+    println!("{}", Solution::roman_to_int(String::from("IX")));
 }
