@@ -1,8 +1,11 @@
-pub mod roman_to_int;
-use roman_to_int::roman_to_int::Solution;
+mod longest_common_prefix;
+use longest_common_prefix::Solution;
 
 fn main() {
-    println!("{}", Solution::roman_to_int(String::from("III")));
-    println!("{}", Solution::roman_to_int(String::from("IV")));
-    println!("{}", Solution::roman_to_int(String::from("IX")));
+    println!("{}", Solution::longest_common_prefix(
+        vec![
+            String::from("car"),
+            String::from("cir")
+        ]
+    ));
 }
