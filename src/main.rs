@@ -1,5 +1,5 @@
 mod longest_common_prefix;
-use longest_common_prefix::Solution;
+use longest_common_prefix::horizontal_scanning::Solution;
 
 fn main() {
     println!("{}", Solution::longest_common_prefix(
