@@ -6,28 +6,52 @@ impl Solution {
             return false;
         }
 
-        let parentheses = vec![('(', ')'), ('[', ']'), ('{', '}')];
-        let mut parentheses_count = vec![(0,0), (0,0), (0,0)];
+        let mut parentheses: Vec<char> = vec![];
 
-        for (index, p) in parentheses.iter().enumerate() {
-            for c in s.chars() {
-                if c == p.0 {
-                    parentheses_count[index].0 += 1;
-                }
-
-                if c == p.1 {
-                    parentheses_count[index].1 += 1;
-                }
+        for c in s.chars() {
+            if Self::is_open(&c) {
+                parentheses.push(c.clone());
+                continue;
             }
-        }
 
-        for (open, close) in parentheses_count {
-            if open != close {
+            if parentheses.len() > 0 && Self::is_pair(&parentheses[parentheses.len() - 1], &c) {
+                parentheses.pop();
+                continue;
+            }
+
+            if !Self::is_open(&c) {
                 return false;
             }
         }
 
-        return true;
+        if parentheses.len() != 0 {
+            return false;
+        }
 
+        return true;
+    }
+
+    pub fn is_open(c: &char) -> bool {
+        if *c == '(' || *c == '[' || *c == '{' {
+            return true;
+        }
+
+        return false;
+    }
+
+    pub fn is_pair(left: &char, right: &char) -> bool {
+        if *left == '(' && *right == ')' {
+            return true;
+        }
+
+        if *left == '[' && *right == ']' {
+            return true;
+        }
+
+        if *left == '{' && *right == '}' {
+            return true;
+        }
+
+        return false;
     }
 }
