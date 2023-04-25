@@ -1,11 +1,6 @@
-mod longest_common_prefix;
-use longest_common_prefix::horizontal_scanning::Solution;
+mod valid_parentheses;
+use valid_parentheses::self_solution::Solution;
 
 fn main() {
-    println!("{}", Solution::longest_common_prefix(
-        vec![
-            String::from("car"),
-            String::from("cir")
-        ]
-    ));
+    println!("{}", Solution::is_valid(String::from("((()")));
 }
