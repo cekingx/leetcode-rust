@@ -1,7 +1,7 @@
-mod length_of_last_word;
-use length_of_last_word::self_solution_v2::Solution;
+mod plus_one;
+use plus_one::self_solution::Solution;
 
 fn main() {
-    let result = Solution::length_of_last_word(String::from("   dirga   yasa   "));
-    println!("result: {}", result);
+    let result = Solution::plus_one(vec![9,9]);
+    println!("result: {:?}", result);
 }
