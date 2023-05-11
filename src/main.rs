@@ -1,7 +1,7 @@
-mod plus_one;
-use plus_one::self_solution::Solution;
+mod add_binary;
+use add_binary::self_solution::Solution;
 
 fn main() {
-    let result = Solution::plus_one(vec![9,9]);
-    println!("result: {:?}", result);
+    let result = Solution::add_binary(String::from("110010"), String::from("10111"));
+    println!("result: {}", result);
 }
